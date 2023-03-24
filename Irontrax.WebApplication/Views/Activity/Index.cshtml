@@ -1,0 +1,11 @@
+﻿@model ActivitiesListViewModel
+
+@{
+    ViewData["Title"] = $"Activity Stream for {Model.CurrentUserName}";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card-columns">
+    @Html.EditorFor(m=>m.Activities)
+</div>
