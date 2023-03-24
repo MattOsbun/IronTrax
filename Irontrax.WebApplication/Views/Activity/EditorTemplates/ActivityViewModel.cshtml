@@ -1,0 +1,18 @@
+﻿@model ActivityViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="card">
+    <div class="card-header bg-success">
+        <h3>@Model.UserId did:</h3>
+    </div>
+    <div class="card-body">
+        <p>@Model.Description</p>
+    </div>
+    <div class="card-footer">
+        at @Model.TimeLoggedDisplay
+        <a href="" data-activity-id="@Model.id">
+            <span class="fas fa-thumbs-up"></span>
+        </a>
+
+    </div>
+</div>

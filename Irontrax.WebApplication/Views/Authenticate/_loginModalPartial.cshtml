@@ -1,0 +1,40 @@
+﻿@model LoginModel
+
+<div class="modal fade" id="user-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3" id="loginFormModalBody">
+                <form id="loginForm"
+                      method="post"
+                      asp-controller="Authenticate"
+                      asp-action="LoginAjax"
+                      class="form-horizontal"
+                      data-redirect="/Activity/Index">
+                    <div asp-validation-summary="All"></div>
+                    <div class="md-form mb-5">
+                        <label data-error="wrong" data-success="right" asp-for="UserName"></label>
+                        <input asp-for="UserName" class="form-control validate" style="width:50%;" />
+                        <i class="fas fa-user prefix grey-text"></i>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="md-form mb-5">
+                        <label asp-for="Password" data-error="wrong" data-success="right"></label>
+                        <input asp-for="Password" class="form-control validate" style="width:50%;">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center modal-submit">
+                        <button type="button" class="btn btn-primary" data-save="modal">Log In</button>   
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
