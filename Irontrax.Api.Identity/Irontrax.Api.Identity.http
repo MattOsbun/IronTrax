@@ -1,0 +1,6 @@
+@Irontrax.Api.Identity_HostAddress = http://localhost:5080
+
+GET {{Irontrax.Api.Identity_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

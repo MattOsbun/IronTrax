@@ -1,9 +1,8 @@
-﻿using Irontrax.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Irontrax.Api.Activity.Models
+namespace Irontrax.Api.Identity.Models
 {
     internal static class UserMapper
     {
